@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { getIntrospectionQuery } from 'graphql'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Search for some shit
+        {getIntrospectionQuery()}
       </header>
     </div>
   );

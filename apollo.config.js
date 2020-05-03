@@ -1,12 +1,9 @@
 
 module.exports = {
   client: {
-    includes: ['app/**/*.tsx', 'app/**/*.ts'],
+    includes: ['src/**/*.tsx', 'src/**/*.ts'],
     tagName: 'gql',
-    service: {
-      name: 'cerberus',
-      url: 'http://cerberus:8080/v1/graphql',
-      skipSSLValidation: true,
-    },
+    localSchemaFile: 'schema.json',
+    useReadOnlyTypes: true
   },
 };
