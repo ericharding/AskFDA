@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
+import 'bulma/css/bulma.css';
 
-import { getIntrospectionQuery } from 'graphql'
+import { getIntrospectionQuery } from 'graphql';
 import { useAuth0 } from './react-auth0-spa';
 
 function App() {

@@ -1,7 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
-import createAuth0Client, { Auth0ClientOptions, Auth0Client } from "@auth0/auth0-spa-js";
+import React, { useState, useEffect, useContext } from 'react';
+import createAuth0Client, {
+  Auth0ClientOptions,
+  Auth0Client,
+} from '@auth0/auth0-spa-js';
 
-const DEFAULT_REDIRECT_CALLBACK = () => window.history.replaceState({}, document.title, window.location.pathname);
+const DEFAULT_REDIRECT_CALLBACK = () =>
+  window.history.replaceState({}, document.title, window.location.pathname);
 
 export interface AuthContext {
   isAuthenticated: boolean;
@@ -26,18 +30,18 @@ export const Auth0Context = React.createContext<AuthContext>({
 export const useAuth0 = () => useContext(Auth0Context);
 
 interface Auth0ProviderProps extends Auth0ClientOptions {
-  children : any,
-  onRedirectCallback : (arg:any)=>void
+  children: any;
+  onRedirectCallback: (arg: any) => void;
 }
 
 export const Auth0Provider = ({
   children,
   onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
   ...initOptions
-} : Auth0ProviderProps ) => {
+}: Auth0ProviderProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<string>();
-  const [auth0Client, setAuth0] = useState<Auth0Client|undefined>();
+  const [auth0Client, setAuth0] = useState<Auth0Client | undefined>();
   const [loading, setLoading] = useState(true);
   const [popupOpen, setPopupOpen] = useState(false);
 
@@ -46,7 +50,10 @@ export const Auth0Provider = ({
       const auth0FromHook = await createAuth0Client(initOptions);
       setAuth0(auth0FromHook);
 
-      if (window.location.search.includes("code=") && window.location.search.includes("state=")) {
+      if (
+        window.location.search.includes('code=') &&
+        window.location.search.includes('state=')
+      ) {
         const { appState } = await auth0FromHook.handleRedirectCallback();
         onRedirectCallback(appState);
       }
@@ -108,8 +115,7 @@ export const Auth0Provider = ({
         getTokenWithPopup: (...p) => auth0Client.getTokenWithPopup(...p),
         //@ts-ignore
         logout: (...p) => auth0Client.logout(...p),
-      }}
-    >
+      }}>
       {children}
     </Auth0Context.Provider>
   );

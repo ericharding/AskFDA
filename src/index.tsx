@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Auth0Provider } from './react-auth0-spa';
-import config from './auth0config'
-import history from './utils/history'
+import config from './auth0config';
+import history from './utils/history';
 
-
-const onRedirectCallbck = (appState:any) => {
+const onRedirectCallbck = (appState: any) => {
   history.push(appState?.targetUrl || window.location.pathname);
-}
+};
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,11 +16,9 @@ ReactDOM.render(
       domain={config.domain}
       client_id={config.clientId}
       redirect_uri={window.location.origin}
-      onRedirectCallback={onRedirectCallbck}
-      >
-    <App />
+      onRedirectCallback={onRedirectCallbck}>
+      <App />
     </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
