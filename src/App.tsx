@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 
 import { getIntrospectionQuery } from 'graphql'
+import { useAuth0 } from './react-auth0-spa';
 
 function App() {
+  const { loading } = useAuth0();
   return (
     <div className="App">
       <header className="App-header">
-        {getIntrospectionQuery()}
+        {loading ? 'loading' : getIntrospectionQuery()}
       </header>
     </div>
   );
