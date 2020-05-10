@@ -7,6 +7,7 @@ import config from './auth0config';
 import history from './utils/history';
 
 const onRedirectCallbck = (appState: any) => {
+  console.log('onRedirectCallbck');
   history.push(appState?.targetUrl || window.location.pathname);
 };
 
