@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink as RouterNavLink } from 'react-router-dom';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
   Collapse,
@@ -19,8 +19,6 @@ import {
 } from 'reactstrap';
 
 import { useAuth0 } from '../react-auth0-spa';
-
-const FontAwesomeIcon = () => <span>icon</span>;
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

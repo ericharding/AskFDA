@@ -1,14 +1,21 @@
 import React from 'react';
-import './App.css';
 
 import { Router, Route, Switch } from 'react-router-dom';
+import { Container } from 'reactstrap'
 import Loading from './components/Loading';
-import history from './utils/history';
-
-import { useAuth0 } from './react-auth0-spa';
 import NavBar from './components/NavBar';
 import Home from './views/Home';
 import Profile from './views/Profile';
+import Footer from './components/Footer';
+import PrivateRoute from './components/PrivateRoute';
+import { useAuth0 } from './react-auth0-spa';
+import history from './utils/history';
+
+import './App.css';
+
+import initFontAwesome from './utils/initFontAwesome'
+initFontAwesome();
+
 
 function App() {
   const { loading } = useAuth0();
@@ -18,12 +25,13 @@ function App() {
   return (
     <Router history={history}>
       <NavBar />
-      <div className="container">
+      <Container>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/profile" component={Profile} />
+          <PrivateRoute path="/profile" component={Profile} />
         </Switch>
-      </div>
+      </Container>
+      <Footer />
     </Router>
   );
 }
