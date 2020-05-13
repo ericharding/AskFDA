@@ -22,7 +22,7 @@ const Profile = () => {
           />
         </div>
         <div className="column is-vcentered">
-          <h2>{user.name}</h2>
+          <h2>{user.nickname}</h2>
           <p className="lead text-muted">{user.email}</p>
         </div>
       </div>

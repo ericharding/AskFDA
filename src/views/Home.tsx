@@ -8,10 +8,10 @@ import { useSearchQuery } from '../queries/searchQuery';
 
 const SearchResults = () => {
   const { isAuthenticated } = useAuth0();
-  const { data, loading, error } = useSearchQuery('lorem');
+  const { data, error } = useSearchQuery('lorem');
   if (!isAuthenticated) return null;
   if(error) console.log(error);
-  return <div>{loading ? null : data}</div>;
+  return <div>{data?.search_inquiries[0].text}</div>;
 };
 
 const Home = () => {

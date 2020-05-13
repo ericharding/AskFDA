@@ -11,6 +11,6 @@ const SEARCHQUERY = gql`
     }
   }
 `;
-const useSearchQuery = (search: string) =>
-  useQuery<SearchQuery>(SEARCHQUERY, { variables: { search } });
+const useSearchQuery = (term: string) =>
+  useQuery<SearchQuery>(SEARCHQUERY, { variables: { term } });
 export { useSearchQuery, SEARCHQUERY };
