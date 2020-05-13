@@ -13,7 +13,7 @@ const onRedirectCallbck = (appState: any) => {
 };
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Auth0Provider
       domain={config.domain}
       client_id={config.clientId}
@@ -21,6 +21,7 @@ ReactDOM.render(
       onRedirectCallback={onRedirectCallbck}>
       <App />
     </Auth0Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>
+  ,
   document.getElementById('root')
 );

@@ -1,5 +1,8 @@
 import gql from 'graphql-tag';
-export default gql`
+import { SearchQuery } from '../types/SearchQuery';
+import { useQuery } from 'react-apollo';
+
+const SEARCHQUERY = gql`
   query SearchQuery($term: String!) {
     search_inquiries(args: { search: $term }) {
       text
@@ -8,3 +11,6 @@ export default gql`
     }
   }
 `;
+const useSearchQuery = (search: string) =>
+  useQuery<SearchQuery>(SEARCHQUERY, { variables: { search } });
+export { useSearchQuery, SEARCHQUERY };

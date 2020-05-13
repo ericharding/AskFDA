@@ -15,6 +15,7 @@ import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 interface Auth0Context {
   isAuthenticated: boolean;
   user: any;
+  idToken : string;
   loading: boolean;
   popupOpen: boolean;
   loginWithPopup(options: PopupLoginOptions): Promise<void>;
@@ -45,6 +46,7 @@ export const Auth0Provider = ({
   const [auth0Client, setAuth0] = useState<Auth0Client>();
   const [loading, setLoading] = useState(true);
   const [popupOpen, setPopupOpen] = useState(false);
+  const [idToken, setIdToken] = useState("");
 
   useEffect(() => {
     const initAuth0 = async () => {
@@ -63,6 +65,8 @@ export const Auth0Provider = ({
       if (isAuthenticated) {
         const user = await auth0FromHook.getUser();
         setUser(user);
+        const idTokenClaims = await auth0FromHook.getIdTokenClaims();
+        setIdToken(idTokenClaims.__raw);
       }
 
       setLoading(false);
@@ -99,6 +103,7 @@ export const Auth0Provider = ({
       value={{
         isAuthenticated,
         user,
+        idToken,
         loading,
         popupOpen,
         loginWithPopup,
