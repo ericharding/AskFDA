@@ -36,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen": "rm -rf src/types/ && apollo codegen:generate --localSchemaFile=schema.json --target=typescript --outputFlat src/types",
+    "codegen": "rm -rf src/types/ && apollo codegen:generate --config=apollo.config.js --target=typescript --outputFlat src/types",
+    "update:schema": "apollo client:download-schema --endpoint http://cerberus:5532/v1/graphql",
     "format": "prettier --write \"**/*.ts?(x)\""
   },
   "resolutions": {

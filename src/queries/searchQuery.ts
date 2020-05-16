@@ -2,12 +2,14 @@ import gql from 'graphql-tag';
 import { SearchQuery } from '../types/SearchQuery';
 import { useQuery } from 'react-apollo';
 
+
 const SEARCHQUERY = gql`
   query SearchQuery($term: String!) {
-    search_inquiries(args: { search: $term }) {
-      text
-      year
+    search_inquiries(args: { search: $term }, order_by: {year: asc} }) {
+      id
+      title
       file_name
+      year
     }
   }
 `;

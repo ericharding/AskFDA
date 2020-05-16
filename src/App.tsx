@@ -17,6 +17,13 @@ import './App.css';
 import initFontAwesome from './utils/initFontAwesome';
 initFontAwesome();
 
+/*
+home = search input
+home q=xyz = search input, search result table
+message id=X = show 1 message, allow editing subject if logged in
+
+*/
+
 function App() {
   const { loading, idToken } = useAuth0();
   if (loading) {

@@ -1,463 +1,26 @@
 {
-  "data": {
-    "__schema": {
-      "directives": [
-        {
-          "args": [
-            {
-              "name": "if",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Boolean",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ],
-          "name": "include",
-          "locations": [
-            "FIELD",
-            "FRAGMENT_SPREAD",
-            "INLINE_FRAGMENT"
-          ],
-          "description": null
-        },
-        {
-          "args": [
-            {
-              "name": "if",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Boolean",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ],
-          "name": "skip",
-          "locations": [
-            "FIELD",
-            "FRAGMENT_SPREAD",
-            "INLINE_FRAGMENT"
-          ],
-          "description": null
-        }
-      ],
-      "queryType": {
-        "name": "query_root"
-      },
-      "subscriptionType": {
-        "name": "subscription_root"
-      },
-      "types": [
-        {
-          "inputFields": null,
-          "kind": "SCALAR",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "Boolean",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "SCALAR",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "Float",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "SCALAR",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "ID",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "SCALAR",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "Int",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "_eq",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_gt",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_gte",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_in",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "_is_null",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_lt",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_lte",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_neq",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_nin",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  }
-                }
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "Int_comparison_exp",
-          "enumValues": null,
-          "description": "expression to compare columns of type Int. All fields are combined with logical 'AND'.",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "SCALAR",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "String",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "_eq",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_gt",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_gte",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_ilike",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_in",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "_is_null",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_like",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_lt",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_lte",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_neq",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_nilike",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_nin",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "_nlike",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_nsimilar",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_similar",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "String_comparison_exp",
-          "enumValues": null,
-          "description": "expression to compare columns of type String. All fields are combined with logical 'AND'.",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__Directive",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "args",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "__InputValue",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "description",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "locations",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
+  "__schema": {
+    "queryType": {
+      "name": "query_root"
+    },
+    "mutationType": null,
+    "subscriptionType": {
+      "name": "subscription_root"
+    },
+    "types": [
+      {
+        "kind": "OBJECT",
+        "name": "query_root",
+        "description": "query root",
+        "fields": [
+          {
+            "name": "inquiries",
+            "description": "fetch data from the table: \"inquiries\"",
+            "args": [
+              {
+                "name": "distinct_on",
+                "description": "distinct select on columns",
+                "type": {
                   "kind": "LIST",
                   "name": null,
                   "ofType": {
@@ -465,529 +28,66 @@
                     "name": null,
                     "ofType": {
                       "kind": "ENUM",
-                      "name": "__DirectiveLocation",
+                      "name": "inquiries_select_column",
                       "ofType": null
                     }
                   }
-                }
+                },
+                "defaultValue": null
               },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "name",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
+              {
+                "name": "limit",
+                "description": "limit the number of rows returned",
+                "type": {
                   "kind": "SCALAR",
-                  "name": "String",
+                  "name": "Int",
                   "ofType": null
-                }
+                },
+                "defaultValue": null
               },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "__DirectiveLocation",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "ARGUMENT_DEFINITION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "ENUM",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "ENUM_VALUE",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "FIELD",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "FIELD_DEFINITION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "FRAGMENT_DEFINITION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "FRAGMENT_SPREAD",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INLINE_FRAGMENT",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INPUT_FIELD_DEFINITION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INPUT_OBJECT",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INTERFACE",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "MUTATION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "OBJECT",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "QUERY",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "SCALAR",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "SCHEMA",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "SUBSCRIPTION",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "UNION",
-              "description": null
-            }
-          ],
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__EnumValue",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "deprecationReason",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "description",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "isDeprecated",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
+              {
+                "name": "offset",
+                "description": "skip the first n rows. Use only with order_by",
+                "type": {
                   "kind": "SCALAR",
-                  "name": "Boolean",
+                  "name": "Int",
                   "ofType": null
-                }
+                },
+                "defaultValue": null
               },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "name",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__Field",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "args",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
+              {
+                "name": "order_by",
+                "description": "sort the rows by one or more columns",
+                "type": {
                   "kind": "LIST",
                   "name": null,
                   "ofType": {
                     "kind": "NON_NULL",
                     "name": null,
                     "ofType": {
-                      "kind": "OBJECT",
-                      "name": "__InputValue",
+                      "kind": "INPUT_OBJECT",
+                      "name": "inquiries_order_by",
                       "ofType": null
                     }
                   }
-                }
+                },
+                "defaultValue": null
               },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "deprecationReason",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "description",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "isDeprecated",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Boolean",
+              {
+                "name": "where",
+                "description": "filter the rows returned",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "inquiries_bool_exp",
                   "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "name",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "type",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "__Type",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__InputValue",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "defaultValue",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "description",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "name",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "type",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "__Type",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__Schema",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "directives",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "__Directive",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "mutationType",
-              "type": {
-                "kind": "OBJECT",
-                "name": "__Type",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "queryType",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "__Type",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "subscriptionType",
-              "type": {
-                "kind": "OBJECT",
-                "name": "__Type",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "types",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "__Type",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "__Type",
-          "enumValues": null,
-          "description": null,
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "description",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [
-                {
-                  "name": "includeDeprecated",
-                  "defaultValue": "false",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Boolean",
-                    "ofType": null
-                  },
-                  "description": null
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "enumValues",
-              "type": {
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "LIST",
                 "name": null,
                 "ofType": {
@@ -995,30 +95,131 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "__EnumValue",
+                    "name": "inquiries",
                     "ofType": null
                   }
                 }
-              },
-              "description": null
+              }
             },
-            {
-              "args": [
-                {
-                  "name": "includeDeprecated",
-                  "defaultValue": "false",
-                  "type": {
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inquiries_by_pk",
+            "description": "fetch data from the table: \"inquiries\" using primary key columns",
+            "args": [
+              {
+                "name": "id",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
                     "kind": "SCALAR",
-                    "name": "Boolean",
+                    "name": "Int",
                     "ofType": null
-                  },
-                  "description": null
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "fields",
-              "type": {
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "inquiries",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "search_inquiries",
+            "description": "execute function \"search_inquiries\" which returns \"inquiries\"",
+            "args": [
+              {
+                "name": "args",
+                "description": "input parameters for function \"search_inquiries\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "search_inquiries_args",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "distinct_on",
+                "description": "distinct select on columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "ENUM",
+                      "name": "inquiries_select_column",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "limit",
+                "description": "limit the number of rows returned",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "offset",
+                "description": "skip the first n rows. Use only with order_by",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "order_by",
+                "description": "sort the rows by one or more columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "inquiries_order_by",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": "filter the rows returned",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "inquiries_bool_exp",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "LIST",
                 "name": null,
                 "ofType": {
@@ -1026,19 +227,1480 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "__Field",
+                    "name": "inquiries",
                     "ofType": null
                   }
                 }
-              },
-              "description": null
+              }
             },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inputFields",
-              "type": {
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "inquiries_select_column",
+        "description": "select columns of table \"inquiries\"",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "file_name",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "text",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tsv",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "year",
+            "description": "column name",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Int",
+        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "inquiries_order_by",
+        "description": "ordering options when selecting data from \"inquiries\"",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "file_name",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "text",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "tsv",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "year",
+            "description": null,
+            "type": {
+              "kind": "ENUM",
+              "name": "order_by",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "order_by",
+        "description": "column ordering options",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "asc",
+            "description": "in the ascending order, nulls last",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "asc_nulls_first",
+            "description": "in the ascending order, nulls first",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "asc_nulls_last",
+            "description": "in the ascending order, nulls last",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "desc",
+            "description": "in the descending order, nulls first",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "desc_nulls_first",
+            "description": "in the descending order, nulls first",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "desc_nulls_last",
+            "description": "in the descending order, nulls last",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "inquiries_bool_exp",
+        "description": "Boolean expression to filter rows from the table \"inquiries\". All fields are combined with a logical 'AND'.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_and",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "inquiries_bool_exp",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_not",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "inquiries_bool_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_or",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "inquiries_bool_exp",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "file_name",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "String_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "Int_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "text",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "String_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "String_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "tsv",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "tsvector_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "year",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "Int_comparison_exp",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "String_comparison_exp",
+        "description": "expression to compare columns of type String. All fields are combined with logical 'AND'.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_eq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_ilike",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_is_null",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_like",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_neq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nilike",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nin",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nlike",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nsimilar",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_similar",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "String",
+        "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Boolean",
+        "description": "The `Boolean` scalar type represents `true` or `false`.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "Int_comparison_exp",
+        "description": "expression to compare columns of type Int. All fields are combined with logical 'AND'.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_eq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_is_null",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_neq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nin",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "tsvector_comparison_exp",
+        "description": "expression to compare columns of type tsvector. All fields are combined with logical 'AND'.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "_eq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_gte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "tsvector",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_is_null",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lt",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_lte",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_neq",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_nin",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "tsvector",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "tsvector",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "inquiries",
+        "description": "columns and relationships of \"inquiries\"",
+        "fields": [
+          {
+            "name": "file_name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "text",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tsv",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "tsvector",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "year",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "search_inquiries_args",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "search",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "subscription_root",
+        "description": "subscription root",
+        "fields": [
+          {
+            "name": "inquiries",
+            "description": "fetch data from the table: \"inquiries\"",
+            "args": [
+              {
+                "name": "distinct_on",
+                "description": "distinct select on columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "ENUM",
+                      "name": "inquiries_select_column",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "limit",
+                "description": "limit the number of rows returned",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "offset",
+                "description": "skip the first n rows. Use only with order_by",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "order_by",
+                "description": "sort the rows by one or more columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "inquiries_order_by",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": "filter the rows returned",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "inquiries_bool_exp",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "inquiries",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inquiries_by_pk",
+            "description": "fetch data from the table: \"inquiries\" using primary key columns",
+            "args": [
+              {
+                "name": "id",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "inquiries",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "search_inquiries",
+            "description": "execute function \"search_inquiries\" which returns \"inquiries\"",
+            "args": [
+              {
+                "name": "args",
+                "description": "input parameters for function \"search_inquiries\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "search_inquiries_args",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "distinct_on",
+                "description": "distinct select on columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "ENUM",
+                      "name": "inquiries_select_column",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "limit",
+                "description": "limit the number of rows returned",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "offset",
+                "description": "skip the first n rows. Use only with order_by",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "order_by",
+                "description": "sort the rows by one or more columns",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "INPUT_OBJECT",
+                      "name": "inquiries_order_by",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "where",
+                "description": "filter the rows returned",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "inquiries_bool_exp",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "inquiries",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Schema",
+        "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+        "fields": [
+          {
+            "name": "types",
+            "description": "A list of all types supported by this server.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Type",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "queryType",
+            "description": "The type that query operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mutationType",
+            "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subscriptionType",
+            "description": "If this server support subscription, the type that subscription operations will be rooted at.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "directives",
+            "description": "A list of all directives supported by this server.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Directive",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Type",
+        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "fields": [
+          {
+            "name": "kind",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "__TypeKind",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fields",
+            "description": null,
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Field",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "interfaces",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "possibleTypes",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "enumValues",
+            "description": null,
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__EnumValue",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "inputFields",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__InputValue",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ofType",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "__TypeKind",
+        "description": "An enum describing what kind of type a given `__Type` is.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "SCALAR",
+            "description": "Indicates this type is a scalar.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OBJECT",
+            "description": "Indicates this type is an object. `fields` and `interfaces` are valid fields.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNION",
+            "description": "Indicates this type is a union. `possibleTypes` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM",
+            "description": "Indicates this type is an enum. `enumValues` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Indicates this type is an input object. `inputFields` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "LIST",
+            "description": "Indicates this type is a list. `ofType` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "NON_NULL",
+            "description": "Indicates this type is a non-null. `ofType` is a valid field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Field",
+        "description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "args",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "LIST",
                 "name": null,
                 "ofType": {
@@ -1050,75 +1712,260 @@
                     "ofType": null
                   }
                 }
-              },
-              "description": null
+              }
             },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "interfaces",
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "OBJECT",
-                    "name": "__Type",
-                    "ofType": null
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "kind",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "ENUM",
-                  "name": "__TypeKind",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "name",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "ofType",
-              "type": {
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "OBJECT",
                 "name": "__Type",
                 "ofType": null
-              },
-              "description": null
+              }
             },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "possibleTypes",
-              "type": {
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isDeprecated",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deprecationReason",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__InputValue",
+        "description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "defaultValue",
+            "description": "A GraphQL-formatted string representing the default value for this input value.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__EnumValue",
+        "description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isDeprecated",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deprecationReason",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Directive",
+        "description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+        "fields": [
+          {
+            "name": "name",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "locations",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "__DirectiveLocation",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "args",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "LIST",
                 "name": null,
                 "ofType": {
@@ -1126,117 +1973,315 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "__Type",
+                    "name": "__InputValue",
                     "ofType": null
                   }
                 }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "__TypeKind",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "ENUM",
-              "description": null
+              }
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INPUT_OBJECT",
-              "description": null
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "__DirectiveLocation",
+        "description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "QUERY",
+            "description": "Location adjacent to a query operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MUTATION",
+            "description": "Location adjacent to a mutation operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SUBSCRIPTION",
+            "description": "Location adjacent to a subscription operation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FIELD",
+            "description": "Location adjacent to a field.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FRAGMENT_DEFINITION",
+            "description": "Location adjacent to a fragment definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FRAGMENT_SPREAD",
+            "description": "Location adjacent to a fragment spread.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INLINE_FRAGMENT",
+            "description": "Location adjacent to an inline fragment.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "VARIABLE_DEFINITION",
+            "description": "Location adjacent to a variable definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SCHEMA",
+            "description": "Location adjacent to a schema definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SCALAR",
+            "description": "Location adjacent to a scalar definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OBJECT",
+            "description": "Location adjacent to an object type definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FIELD_DEFINITION",
+            "description": "Location adjacent to a field definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ARGUMENT_DEFINITION",
+            "description": "Location adjacent to an argument definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Location adjacent to an interface definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNION",
+            "description": "Location adjacent to a union definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM",
+            "description": "Location adjacent to an enum definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ENUM_VALUE",
+            "description": "Location adjacent to an enum value definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Location adjacent to an input object type definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INPUT_FIELD_DEFINITION",
+            "description": "Location adjacent to an input object field definition.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "inquiries_pk_columns_input",
+        "description": "primary key columns input for table: \"inquiries\"",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "INTERFACE",
-              "description": null
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      }
+    ],
+    "directives": [
+      {
+        "name": "skip",
+        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "if",
+            "description": "Skipped when true.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "LIST",
-              "description": null
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "include",
+        "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "if",
+            "description": "Included when true.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "NON_NULL",
-              "description": null
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "deprecated",
+        "description": "Marks an element of a GraphQL schema as no longer supported.",
+        "locations": [
+          "FIELD_DEFINITION",
+          "ENUM_VALUE"
+        ],
+        "args": [
+          {
+            "name": "reason",
+            "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "OBJECT",
-              "description": null
+            "defaultValue": "\"No longer supported\""
+          }
+        ]
+      },
+      {
+        "name": "client",
+        "description": "Direct the client to resolve this field locally, either from the cache or local resolvers.",
+        "locations": [
+          "FIELD",
+          "FRAGMENT_DEFINITION",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "always",
+            "description": "When true, the client will never use the cache for this value. See\nhttps://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
             },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "SCALAR",
-              "description": null
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "UNION",
-              "description": null
-            }
-          ],
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries",
-          "enumValues": null,
-          "description": "columns and relationships of \"inquiries\"",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "file_name",
-              "type": {
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "export",
+        "description": "Export this locally resolved field as a variable to be used in the remainder of this query. See\nhttps://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables",
+        "locations": [
+          "FIELD"
+        ],
+        "args": [
+          {
+            "name": "as",
+            "description": "The variable name to export this field as.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
                 "kind": "SCALAR",
                 "name": "String",
                 "ofType": null
-              },
-              "description": null
+              }
             },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "description": null
+            "defaultValue": null
+          }
+        ]
+      },
+      {
+        "name": "connection",
+        "description": "Specify a custom store key for this result. See\nhttps://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive",
+        "locations": [
+          "FIELD"
+        ],
+        "args": [
+          {
+            "name": "key",
+            "description": "Specify the store key.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "text",
-              "type": {
+            "defaultValue": null
+          },
+          {
+            "name": "filter",
+            "description": "An array of query argument names to include in the generated custom store key.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
                 "kind": "NON_NULL",
                 "name": null,
                 "ofType": {
@@ -1244,2691 +2289,12 @@
                   "name": "String",
                   "ofType": null
                 }
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_aggregate",
-          "enumValues": null,
-          "description": "aggregated selection of \"inquiries\"",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "aggregate",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_aggregate_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "nodes",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_aggregate_fields",
-          "enumValues": null,
-          "description": "aggregate fields of \"inquiries\"",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "avg",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_avg_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [
-                {
-                  "name": "columns",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": null
-                },
-                {
-                  "name": "distinct",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Boolean",
-                    "ofType": null
-                  },
-                  "description": null
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "count",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "max",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_max_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "min",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_min_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "stddev",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_stddev_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "stddev_pop",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_stddev_pop_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "stddev_samp",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_stddev_samp_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "sum",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_sum_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "var_pop",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_var_pop_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "var_samp",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_var_samp_fields",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "variance",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_variance_fields",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "avg",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_avg_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "count",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "max",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_max_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "min",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_min_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "stddev",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_stddev_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "stddev_pop",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_stddev_pop_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "stddev_samp",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_stddev_samp_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "sum",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_sum_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "var_pop",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_var_pop_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "var_samp",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_var_samp_order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "variance",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_variance_order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_aggregate_order_by",
-          "enumValues": null,
-          "description": "order by aggregate values of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "data",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "inquiries_insert_input",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "on_conflict",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_on_conflict",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_arr_rel_insert_input",
-          "enumValues": null,
-          "description": "input type for inserting array relation for remote table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_avg_fields",
-          "enumValues": null,
-          "description": "aggregate avg on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_avg_order_by",
-          "enumValues": null,
-          "description": "order by avg() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "_and",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "inquiries_bool_exp",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "_not",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_bool_exp",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "_or",
-              "defaultValue": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "inquiries_bool_exp",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "String_comparison_exp",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "Int_comparison_exp",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "String_comparison_exp",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "Int_comparison_exp",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_bool_exp",
-          "enumValues": null,
-          "description": "Boolean expression to filter rows from the table \"inquiries\". All fields are combined with a logical 'AND'.",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_constraint",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "Inquiries_pkey",
-              "description": "unique or primary key constraint"
-            }
-          ],
-          "description": "unique or primary key constraints on table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_inc_input",
-          "enumValues": null,
-          "description": "input type for incrementing integer columne in table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_insert_input",
-          "enumValues": null,
-          "description": "input type for inserting data into table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_max_fields",
-          "enumValues": null,
-          "description": "aggregate max on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "file_name",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "text",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_max_order_by",
-          "enumValues": null,
-          "description": "order by max() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_min_fields",
-          "enumValues": null,
-          "description": "aggregate min on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "file_name",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "text",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_min_order_by",
-          "enumValues": null,
-          "description": "order by min() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_mutation_response",
-          "enumValues": null,
-          "description": "response of any mutation on the table \"inquiries\"",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "affected_rows",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                }
-              },
-              "description": "number of affected rows by the mutation"
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "returning",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": "data of the affected rows by the mutation"
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "data",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "inquiries_insert_input",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "on_conflict",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_on_conflict",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_obj_rel_insert_input",
-          "enumValues": null,
-          "description": "input type for inserting object relation for remote table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "constraint",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "ENUM",
-                  "name": "inquiries_constraint",
-                  "ofType": null
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "update_columns",
-              "defaultValue": null,
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "ENUM",
-                      "name": "inquiries_update_column",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": null
-            },
-            {
-              "name": "where",
-              "defaultValue": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "inquiries_bool_exp",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_on_conflict",
-          "enumValues": null,
-          "description": "on conflict condition type for table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_order_by",
-          "enumValues": null,
-          "description": "ordering options when selecting data from \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_select_column",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "file_name",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "text",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "description": "column name"
-            }
-          ],
-          "description": "select columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": [
-            {
-              "name": "file_name",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "text",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_set_input",
-          "enumValues": null,
-          "description": "input type for updating data in table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_stddev_fields",
-          "enumValues": null,
-          "description": "aggregate stddev on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_stddev_order_by",
-          "enumValues": null,
-          "description": "order by stddev() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_stddev_pop_fields",
-          "enumValues": null,
-          "description": "aggregate stddev_pop on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_stddev_pop_order_by",
-          "enumValues": null,
-          "description": "order by stddev_pop() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_stddev_samp_fields",
-          "enumValues": null,
-          "description": "aggregate stddev_samp on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_stddev_samp_order_by",
-          "enumValues": null,
-          "description": "order by stddev_samp() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_sum_fields",
-          "enumValues": null,
-          "description": "aggregate sum on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_sum_order_by",
-          "enumValues": null,
-          "description": "order by sum() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_update_column",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "file_name",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "text",
-              "description": "column name"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "description": "column name"
-            }
-          ],
-          "description": "update columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_var_pop_fields",
-          "enumValues": null,
-          "description": "aggregate var_pop on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_var_pop_order_by",
-          "enumValues": null,
-          "description": "order by var_pop() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_var_samp_fields",
-          "enumValues": null,
-          "description": "aggregate var_samp on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_var_samp_order_by",
-          "enumValues": null,
-          "description": "order by var_samp() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "inquiries_variance_fields",
-          "enumValues": null,
-          "description": "aggregate variance on columns",
-          "fields": [
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "id",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "args": [],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "year",
-              "type": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              },
-              "description": null
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "id",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            },
-            {
-              "name": "year",
-              "defaultValue": null,
-              "type": {
-                "kind": "ENUM",
-                "name": "order_by",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "inquiries_variance_order_by",
-          "enumValues": null,
-          "description": "order by variance() on columns of table \"inquiries\"",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "mutation_root",
-          "enumValues": null,
-          "description": "mutation root",
-          "fields": [
-            {
-              "args": [
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "inquiries_bool_exp",
-                      "ofType": null
-                    }
-                  },
-                  "description": "filter the rows which have to be deleted"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "delete_inquiries",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_mutation_response",
-                "ofType": null
-              },
-              "description": "delete data from the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "objects",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "LIST",
-                      "name": null,
-                      "ofType": {
-                        "kind": "NON_NULL",
-                        "name": null,
-                        "ofType": {
-                          "kind": "INPUT_OBJECT",
-                          "name": "inquiries_insert_input",
-                          "ofType": null
-                        }
-                      }
-                    }
-                  },
-                  "description": "the rows to be inserted"
-                },
-                {
-                  "name": "on_conflict",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_on_conflict",
-                    "ofType": null
-                  },
-                  "description": "on conflict condition"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "insert_inquiries",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_mutation_response",
-                "ofType": null
-              },
-              "description": "insert data into the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "_inc",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_inc_input",
-                    "ofType": null
-                  },
-                  "description": "increments the integer columns with given value of the filtered values"
-                },
-                {
-                  "name": "_set",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_set_input",
-                    "ofType": null
-                  },
-                  "description": "sets the columns of the filtered rows to the given values"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "inquiries_bool_exp",
-                      "ofType": null
-                    }
-                  },
-                  "description": "filter the rows which have to be updated"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "update_inquiries",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries_mutation_response",
-                "ofType": null
-              },
-              "description": "update data of the table: \"inquiries\""
-            }
-          ]
-        },
-        {
-          "inputFields": null,
-          "kind": "ENUM",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "order_by",
-          "enumValues": [
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "asc",
-              "description": "in the ascending order, nulls last"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "asc_nulls_first",
-              "description": "in the ascending order, nulls first"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "asc_nulls_last",
-              "description": "in the ascending order, nulls last"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "desc",
-              "description": "in the descending order, nulls first"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "desc_nulls_first",
-              "description": "in the descending order, nulls first"
-            },
-            {
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "desc_nulls_last",
-              "description": "in the descending order, nulls last"
-            }
-          ],
-          "description": "column ordering options",
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "query_root",
-          "enumValues": null,
-          "description": "query root",
-          "fields": [
-            {
-              "args": [
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": "fetch data from the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries_aggregate",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "inquiries_aggregate",
-                  "ofType": null
-                }
-              },
-              "description": "fetch aggregated fields from the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "id",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "SCALAR",
-                      "name": "Int",
-                      "ofType": null
-                    }
-                  },
-                  "description": null
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries_by_pk",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries",
-                "ofType": null
-              },
-              "description": "fetch data from the table: \"inquiries\" using primary key columns"
-            },
-            {
-              "args": [
-                {
-                  "name": "args",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "search_inquiries_args",
-                      "ofType": null
-                    }
-                  },
-                  "description": "input parameters for function \"search_inquiries\""
-                },
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "search_inquiries",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": "execute function \"search_inquiries\" which returns \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "args",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "search_inquiries_args",
-                      "ofType": null
-                    }
-                  },
-                  "description": "input parameters for function \"search_inquiries\""
-                },
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "search_inquiries_aggregate",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "inquiries_aggregate",
-                  "ofType": null
-                }
-              },
-              "description": "execute function \"search_inquiries\" and query aggregates on result of table type \"inquiries\""
-            }
-          ]
-        },
-        {
-          "inputFields": [
-            {
-              "name": "search",
-              "defaultValue": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "description": null
-            }
-          ],
-          "kind": "INPUT_OBJECT",
-          "possibleTypes": null,
-          "interfaces": null,
-          "name": "search_inquiries_args",
-          "enumValues": null,
-          "description": null,
-          "fields": null
-        },
-        {
-          "inputFields": null,
-          "kind": "OBJECT",
-          "possibleTypes": null,
-          "interfaces": [],
-          "name": "subscription_root",
-          "enumValues": null,
-          "description": "subscription root",
-          "fields": [
-            {
-              "args": [
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": "fetch data from the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries_aggregate",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "inquiries_aggregate",
-                  "ofType": null
-                }
-              },
-              "description": "fetch aggregated fields from the table: \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "id",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "SCALAR",
-                      "name": "Int",
-                      "ofType": null
-                    }
-                  },
-                  "description": null
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "inquiries_by_pk",
-              "type": {
-                "kind": "OBJECT",
-                "name": "inquiries",
-                "ofType": null
-              },
-              "description": "fetch data from the table: \"inquiries\" using primary key columns"
-            },
-            {
-              "args": [
-                {
-                  "name": "args",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "search_inquiries_args",
-                      "ofType": null
-                    }
-                  },
-                  "description": "input parameters for function \"search_inquiries\""
-                },
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "search_inquiries",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "OBJECT",
-                      "name": "inquiries",
-                      "ofType": null
-                    }
-                  }
-                }
-              },
-              "description": "execute function \"search_inquiries\" which returns \"inquiries\""
-            },
-            {
-              "args": [
-                {
-                  "name": "args",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "INPUT_OBJECT",
-                      "name": "search_inquiries_args",
-                      "ofType": null
-                    }
-                  },
-                  "description": "input parameters for function \"search_inquiries\""
-                },
-                {
-                  "name": "distinct_on",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "ENUM",
-                        "name": "inquiries_select_column",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "distinct select on columns"
-                },
-                {
-                  "name": "limit",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "limit the number of rows returned"
-                },
-                {
-                  "name": "offset",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  },
-                  "description": "skip the first n rows. Use only with order_by"
-                },
-                {
-                  "name": "order_by",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "LIST",
-                    "name": null,
-                    "ofType": {
-                      "kind": "NON_NULL",
-                      "name": null,
-                      "ofType": {
-                        "kind": "INPUT_OBJECT",
-                        "name": "inquiries_order_by",
-                        "ofType": null
-                      }
-                    }
-                  },
-                  "description": "sort the rows by one or more columns"
-                },
-                {
-                  "name": "where",
-                  "defaultValue": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "inquiries_bool_exp",
-                    "ofType": null
-                  },
-                  "description": "filter the rows returned"
-                }
-              ],
-              "isDeprecated": false,
-              "deprecationReason": null,
-              "name": "search_inquiries_aggregate",
-              "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "inquiries_aggregate",
-                  "ofType": null
-                }
-              },
-              "description": "execute function \"search_inquiries\" and query aggregates on result of table type \"inquiries\""
-            }
-          ]
-        }
-      ],
-      "mutationType": {
-        "name": "mutation_root"
+              }
+            },
+            "defaultValue": null
+          }
+        ]
       }
-    }
+    ]
   }
 }

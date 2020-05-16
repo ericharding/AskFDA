@@ -1,26 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
-import Hero from '../components/Hero';
-import Content from '../components/Content';
-import { useAuth0 } from '../react-auth0-spa';
 
-import { useSearchQuery } from '../queries/searchQuery';
-
-const SearchResults = () => {
-  const { isAuthenticated } = useAuth0();
-  const { data, error } = useSearchQuery('lorem');
-  if (!isAuthenticated) return null;
+const SearchResults = ({search}) => {
   if(error) console.log(error);
   return <div>{data?.search_inquiries[0].text}</div>;
 };
 
 const Home = () => {
+  const { search, setSearch } = useState(""); 
   return (
     <Fragment>
-      <Hero />
-      <SearchResults />
-      <hr />
-      <Content />
+      <SearchResults query={search} />
     </Fragment>
   );
 };
