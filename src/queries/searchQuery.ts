@@ -4,7 +4,7 @@ import { useQuery } from 'react-apollo';
 
 const SEARCHQUERY = gql`
   query SearchQuery($term: String!) {
-    search_inquiries(args: { search: $term }) {
+    search_inquiries(args: { search: $term }, order_by: {year: asc}) {
       text
       year
       file_name
