@@ -11,7 +11,7 @@ function ShowMessage(data: MessageQuery) {
   return (
     <div>
       <h3>Subject: '{msg.title||'?'}'</h3>
-      <h4>{msg.file_name}, {msg.year}</h4>
+      <h4 className='text-muted'>{msg.file_name}, {msg.year}</h4>
       <hr />
       <p>
         <pre>
