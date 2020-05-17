@@ -5,9 +5,10 @@ import { useQuery } from 'react-apollo';
 const SEARCHQUERY = gql`
   query SearchQuery($term: String!) {
     search_inquiries(args: { search: $term }, order_by: {year: asc}) {
-      text
+      id
       year
       file_name
+      title
     }
   }
 `;

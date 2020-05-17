@@ -9,9 +9,10 @@
 
 export interface SearchQuery_search_inquiries {
   __typename: "inquiries";
-  text: string;
+  id: number;
   year: number;
   file_name: string | null;
+  title: string | null;
 }
 
 export interface SearchQuery {
