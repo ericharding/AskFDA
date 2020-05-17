@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSearchQuery } from '../queries/searchQuery';
-import { Spinner, Table } from 'reactstrap';
+import { Table } from 'reactstrap';
 import { SearchQuery } from '../types/SearchQuery';
+import { Link } from 'react-router-dom';
+import HandleErrorLoading from './HandleErrorLoading';
 
 interface Props {
   query: string;
@@ -12,21 +14,23 @@ function table(data: SearchQuery) {
     <Table>
       <thead>
         <tr>
-        <td>id</td>
-        <td>year</td>
-        <td>subject</td>
-        <td>file</td>
+          <td>id</td>
+          <td>year</td>
+          <td>subject</td>
+          <td>file</td>
         </tr>
       </thead>
       <tbody>
-      {data.search_inquiries.map((row) => (
-        <tr>
-          <td>{row.id}</td>
-          <td>{row.year}</td>
-          <td>{row.title}</td>
-          <td>{row.file_name}</td>
-        </tr>
-      ))}
+        {data.search_inquiries.map((row) => (
+          <tr>
+            <td>{row.id}</td>
+            <td>{row.year}</td>
+            <td>{row.title}</td>
+            <td>
+              <Link to={'message/' + row.id}>{row.file_name}</Link>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </Table>
   );
@@ -34,17 +38,7 @@ function table(data: SearchQuery) {
 
 function SearchResults({ query }: Props) {
   const { data, loading, error } = useSearchQuery(query);
-  if (error) {
-    console.log(error);
-    return <div>{error.message}</div>;
-  }
-  if (loading) {
-    return <Spinner />;
-  } else if (data) {
-    return table(data);
-  } else {
-    return <div>No results</div>;
-  }
+  return HandleErrorLoading<SearchQuery>(data, loading, error, table);
 }
 
 export default SearchResults;
