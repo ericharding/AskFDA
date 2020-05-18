@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useMessageQuery } from 'queries/MessageQuery';
 import { MessageQuery } from 'types/MessageQuery';
-import { useAuth0 } from 'react-auth0-spa';
 import HandleErrorLoading from 'components/HandleErrorLoading';
 
 function ShowMessage(data: MessageQuery) {
