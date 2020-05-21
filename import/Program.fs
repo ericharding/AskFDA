@@ -15,6 +15,10 @@ let runCommand exe args =
 let pdf2text path =
   runCommand "pdf2txt" path
 
+
+let postgresPassword = "zNXDVESKIAv!!"
+let postgresUser = "postgres"
+
 // start in a folder full of zip files
 // run '7z x' on all files
 // recurse into all subdirectories
@@ -26,6 +30,7 @@ let ls = runCommand "ls" ""
 
 let args = 
   Environment.GetCommandLineArgs()
+  |> Array.skip 1
   |> Array.head
 
 printfn "%s" args
