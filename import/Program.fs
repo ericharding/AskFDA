@@ -16,8 +16,8 @@ let pdf2text path =
   runCommand "pdf2txt" path
 
 
-let postgresPassword = "zNXDVESKIAv!!"
-let postgresUser = "postgres"
+
+
 
 // start in a folder full of zip files
 // run '7z x' on all files
@@ -30,7 +30,18 @@ let ls = runCommand "ls" ""
 
 let args = 
   Environment.GetCommandLineArgs()
-  |> Array.skip 1
-  |> Array.head
+  |> Array.toList
+  |> function
+  | [_; arg] -> arg
+  | _ -> "unknown?"
 
 printfn "%s" args
+
+let rows = Database.testRows()
+match rows with
+| Ok r -> 
+  for row in r do
+    printfn "%A" row
+| Error e -> printfn "%s" e.Message
+
+
