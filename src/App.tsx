@@ -37,7 +37,9 @@ function App() {
         <Container>
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/fda" exact component={Home} />
             <Route path="/message/:id" component={Message} />
+            <Route path="/fda/message/:id" component={Message} />
             <PrivateRoute path="/profile" component={Profile} />
           </Switch>
         </Container>

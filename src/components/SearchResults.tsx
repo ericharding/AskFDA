@@ -23,7 +23,7 @@ function table(data: SearchQuery) {
       </thead>
       <tbody>
         {data.search_inquiries.map((row) => (
-          <tr>
+          <tr key={row.id}>
             <td>{row.id}</td>
             <td>{row.year}</td>
             <td>{row.category}</td>

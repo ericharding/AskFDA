@@ -1,5 +1,6 @@
 {
   "name": "fda_inquiries",
+  "homepage": "/fda/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
