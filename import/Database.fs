@@ -38,7 +38,7 @@ let insert row =
   ]
   |> Sql.executeNonQuery
 
-let row = {
+let private row = {
   year = 1999
   text = """ I was dreaming when I wrote this, forgive me if it goes astray
 When I woke up this morning, got up this morning was judgement day
@@ -81,17 +81,6 @@ So tonight I'm gonna party like it's 1999
 
 let insertTestRow () = 
   insert row
-
-// let testRows() =
-//   defaultConnection
-//   |> Sql.connectFromConfig
-//   |> Sql.query "select id, year, text, title from inquiries"
-//   |> Sql.execute (fun read -> { 
-//     year = read.int "year"
-//     text = read.string "text"
-//     title = read.stringOrNone "title"
-//   })
-
 
 
 

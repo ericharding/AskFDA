@@ -35,7 +35,9 @@ let unzip path =
 
 let category (name:string) =
   let cut = name.IndexOf('/')
-  name.Substring(0,cut)
+  if cut > 0 then
+    name.Substring(0,cut) |> Some
+  else None
 
 let pdfStreamToText (data:Stream) =
   data.Seek(0L, SeekOrigin.Begin) |> ignore
@@ -62,7 +64,7 @@ let importZip year path =
         text = text
         file_name = fileName
         title = None
-        category = Some category
+        category = category
         original = rawData }
   }
 
@@ -70,7 +72,7 @@ let import directoryName =
   let year = lastPart directoryName |> int
   let zips = 
     getFiles directoryName "*.zip"
-    |> Array.take 1
+    // |> Array.take 1
     |> Array.map (importZip year)
     |> Seq.collect id
   zips
@@ -85,4 +87,6 @@ printfn "Import from %s" directoryName
 
 let rows = import directoryName
 for r in rows do
-  printfn "%s:\n%s" r.file_name r.text
+  match Database.insert r with
+  | Ok _ -> printfn "Inserted: '%s'" r.file_name
+  | Error e -> printfn "Error on '%s'\n%A" r.file_name e
