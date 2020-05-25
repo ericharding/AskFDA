@@ -11,8 +11,10 @@ export interface SearchQuery_search_inquiries {
   __typename: "inquiries";
   id: number;
   year: number;
-  file_name: string | null;
+  file_name: string;
   title: string | null;
+  category: string | null;
+  updated_at: any | null;
 }
 
 export interface SearchQuery {

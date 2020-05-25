@@ -9,6 +9,8 @@ const SEARCHQUERY = gql`
       year
       file_name
       title
+      category
+      updated_at
     }
   }
 `;

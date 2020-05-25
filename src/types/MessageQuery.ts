@@ -12,7 +12,7 @@ export interface MessageQuery_inquiries {
   text: string;
   title: string | null;
   year: number;
-  file_name: string | null;
+  file_name: string;
   id: number;
 }
 

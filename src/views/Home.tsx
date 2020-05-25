@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Fragment>
       <FormGroup>
-        <Label for="query">Search</Label>
+        <Label for="query">Yo, FDA. What's up with</Label>
         <Input
           name="query"
           value={search}

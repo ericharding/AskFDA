@@ -16,6 +16,7 @@ function table(data: SearchQuery) {
         <tr>
           <td>id</td>
           <td>year</td>
+          <td>category</td>
           <td>subject</td>
           <td>file</td>
         </tr>
@@ -25,6 +26,7 @@ function table(data: SearchQuery) {
           <tr>
             <td>{row.id}</td>
             <td>{row.year}</td>
+            <td>{row.category}</td>
             <td>{row.title}</td>
             <td>
               <Link to={'message/' + row.id}>{row.file_name}</Link>
