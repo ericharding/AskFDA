@@ -17,3 +17,9 @@ let getTempDir () =
 let lastPart (path:string) = 
   Path.TrimEndingDirectorySeparator path
   |> Path.GetFileNameWithoutExtension
+
+let unlink (path:string) =
+  try
+    File.Delete path
+  with
+  | _ -> printfn "Failed to delete '%s'" path

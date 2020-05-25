@@ -16,17 +16,18 @@ let runCommand exe args =
   output
 
 let pdf2text path =
-  printfn "%s" path
+  // printfn "%s" path
   // runCommand "bash" (sprintf "-c pdf2txt %s" path)
-  // runCommand "pdf2txt" path
-  "ok"
+  runCommand "pdf2txt" path
 
 let directoryName = 
   Environment.GetCommandLineArgs()
   |> Array.toList
   |> function
   | [_; arg] -> arg
-  | _ -> "../data/2018"
+  | _ -> 
+    Environment.CurrentDirectory <- """c:\hg\fda_inquiries\import"""
+    "../data/2018"
 
 
 let unzip path =
@@ -37,15 +38,19 @@ let category (name:string) =
   name.Substring(0,cut)
 
 let pdfStreamToText (data:Stream) =
-  let temp = Path.GetTempFileName();
+  data.Seek(0L, SeekOrigin.Begin) |> ignore
+  let temp = Path.GetTempFileName()
   use stream = File.OpenWrite(temp);
   data.CopyTo(stream);
   data.Flush()
-  pdf2text temp
+  stream.Close()
+  let res = pdf2text temp
+  unlink temp
+  res
 
 let importZip year path =
-  let z = unzip path
   seq {
+    use z = unzip path
     for entry in z.Entries do
       let fileName = entry.Name
       let category = category entry.FullName
