@@ -1,7 +1,7 @@
 ﻿open System.Diagnostics
-open System
 open System.IO
 open IO
+open System
 open Database
 
 let runCommand exe args =
@@ -33,11 +33,12 @@ let directoryName =
 let unzip path =
   Compression.ZipFile.OpenRead path
 
-let category (name:string) =
+let category (name:string) (srcPath:string) =
   let cut = name.IndexOf('/')
   if cut > 0 then
     name.Substring(0,cut) |> Some
-  else None
+  else 
+    fileName srcPath |> Some
 
 let pdfStreamToText (data:Stream) =
   data.Seek(0L, SeekOrigin.Begin) |> ignore
@@ -55,7 +56,7 @@ let importZip year path =
     use z = unzip path
     for entry in z.Entries do
       let fileName = entry.Name
-      let category = category entry.FullName
+      let category = category entry.FullName path
       use mem = new MemoryStream()
       entry.Open().CopyTo(mem)
       let rawData = mem.ToArray()
@@ -87,6 +88,7 @@ printfn "Import from %s" directoryName
 
 let rows = import directoryName
 for r in rows do
+  // printfn "%A" r.file_name
   match Database.insert r with
   | Ok _ -> printfn "Inserted: '%s'" r.file_name
   | Error e -> printfn "Error on '%s'\n%A" r.file_name e

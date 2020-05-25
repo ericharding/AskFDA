@@ -23,3 +23,7 @@ let unlink (path:string) =
     File.Delete path
   with
   | _ -> printfn "Failed to delete '%s'" path
+
+let fileName (path:string) =
+  Path.GetFileNameWithoutExtension(path)
+
