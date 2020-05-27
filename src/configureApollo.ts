@@ -14,7 +14,7 @@ function getHeaders(authToken: string) {
 export const createApolloClient = (authToken: string) => {
   return new ApolloClient({
     link: new HttpLink({
-      uri: 'https://api.digitalsorcery.net/v1/graphql',
+      uri: 'https://askfda.org/v1/graphql',
       headers: getHeaders(authToken),
     }),
     cache: new InMemoryCache(),
